@@ -14,223 +14,477 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const App(),
     );
   }
 }
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class App extends StatefulWidget {
+  const App({super.key});
 
   @override
-  HomeScreenState createState() => HomeScreenState();
+  AppState createState() => AppState();
 }
 
-class HomeScreenState extends State<HomeScreen> {
-  int indiceAtual = 0;
+class AppState extends State<App> {
+  int indiceAtual = 4;
+  bool status = true;
+  late final List<Widget> _telas;
 
-  final List<Widget> _telas = [
-    //tela inicio
-    Center(
-      child: Column(
+  @override
+  void initState() {
+    super.initState();
+
+    _telas = [
+      //tela ambientes
+      Container(
+        margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
+        alignment: Alignment.topRight,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              onPressed: (){
+                setState(() {
+                  indiceAtual = 4;
+                });
+              },
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+            ),
+            
+            const Text('Ambientes', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
+          ],
+        ),
+      ),
+
+      //tela objetos
+      Container(
+        margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
+        alignment: Alignment.topRight,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              onPressed: (){
+                setState(() {
+                  indiceAtual = 4;
+                });
+              },
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+            ),
+            
+            const Text('Objetos', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
+          ],
+        ),
+      ),
+      
+      //tela configurações
+      Center(
+        child: Column(
+          children: [
+            Container(
+              margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
+              alignment: Alignment.topRight,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    onPressed: (){
+                      setState(() {
+                        indiceAtual = 4;
+                      });
+                    },
+                    icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                  ),
+                  
+                  const Text('Configurações', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
+                ],
+              ),
+            ),
+
+            Container(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 95, 131, 197),
+                border: Border.all(
+                  color: const Color.fromARGB(255, 45, 69, 128),
+                  width: 1.5,
+                )
+              ),
+              margin: const EdgeInsets.all(50),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(20, 15, 0, 5),
+                    child: const Text('Objetos', style: TextStyle(color: Color.fromARGB(255, 173, 173, 173), fontSize: 25))
+                  ),
+
+                  MaterialButton(
+                    padding: const EdgeInsets.fromLTRB(55, 0, 25, 5),
+                    height: 50,
+                    minWidth: 400,
+                    onPressed: (){},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('Ativos', style: TextStyle(color: Colors.white, fontSize: 25)),
+                        Icon(Icons.arrow_forward_ios, color: Colors.white),
+                      ],
+                    ),
+                  ),
+
+                  MaterialButton(
+                    padding: const EdgeInsets.fromLTRB(55, 10, 25, 5),
+                    height: 50,
+                    minWidth: 400,
+                    onPressed: (){},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('Inativos', style: TextStyle(color: Colors.white, fontSize: 25)),
+                        Icon(Icons.arrow_forward_ios, color: Colors.white),
+                      ],
+                    ),
+                  ),
+
+                  MaterialButton(
+                    padding: const EdgeInsets.fromLTRB(55, 10, 25, 5),
+                    height: 50,
+                    minWidth: 400,
+                    onPressed: (){},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('Banidos', style: TextStyle(color: Colors.white, fontSize: 25)),
+                        Icon(Icons.arrow_forward_ios, color: Colors.white),
+                      ],
+                    ),
+                  ),
+
+                  MaterialButton(
+                    padding: const EdgeInsets.fromLTRB(55, 10, 25, 10),
+                    height: 50,
+                    minWidth: 400,
+                    onPressed: (){},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('Qualificados', style: TextStyle(color: Colors.white, fontSize: 25)),
+                        Icon(Icons.arrow_forward_ios, color: Colors.white),
+                      ],
+                    ),
+                  ),
+
+                  MaterialButton(
+                    padding: const EdgeInsets.fromLTRB(30, 10, 25, 10),
+                    height: 50,
+                    minWidth: 400,
+                    onPressed: (){},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('Círculos Sociais', style: TextStyle(color: Colors.white, fontSize: 25)),
+                        Icon(Icons.arrow_forward_ios, color: Colors.white),
+                      ],
+                    ),
+                  ),
+
+                  MaterialButton(
+                    padding: const EdgeInsets.fromLTRB(30, 15, 25, 25),
+                    height: 50,
+                    minWidth: 400,
+                    onPressed: (){},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('Regras de Negócio', style: TextStyle(color: Colors.white, fontSize: 25)),
+                        Icon(Icons.arrow_forward_ios, color: Colors.white),
+                      ],
+                    ),
+                  ),
+                ],
+              )
+            ),
+          ]
+        ),
+      ),
+
+      //tela perfil
+      Container(
+        margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
+        alignment: Alignment.topRight,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              onPressed: (){
+                setState(() {
+                  indiceAtual = 4;
+                });
+              },
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+            ),
+            
+            const Text('Perfil', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
+          ],
+        ),
+      ),
+
+      //tela inicio
+      Center(
+        child: Column(
+          children: [
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: Stack(
+                alignment: Alignment.topCenter,
+                children: [
+                  Image.asset('assets/images/iotpb.png', fit: BoxFit.scaleDown, height: 250, colorBlendMode: BlendMode.modulate, color: const Color.fromARGB(255, 187, 204, 255).withOpacity(0.9), opacity: const AlwaysStoppedAnimation(.8),),
+                  const Text('smart places', style: TextStyle(color: Colors.white, fontSize: 55)),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: SizedBox(
+                height: 75,
+                width: 240,
+                child: FloatingActionButton.extended(
+                  onPressed: (){
+                    setState(() {
+                      indiceAtual = 5;
+                    });
+                  },
+                  label: const Text('Rastrear Objeto', style: TextStyle(fontSize: 25)),
+                  backgroundColor: const Color.fromARGB(255, 236, 85, 135),
+                  elevation: 10.0,
+                ),
+              ),
+            ),
+
+            const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Text('Por favor, certifique-se que o\nnovo objeto esteja conectado a\nmesma rede deste dispositivo.', style: TextStyle(color: Color.fromARGB(139, 165, 181, 207), fontSize: 20), textAlign: TextAlign.center),
+            ),
+          ]
+        ),
+      ),
+
+      //tela rastrearobj
+      Column(
         children: [
           Container(
-            margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-            child: Stack(
-              alignment: Alignment.topCenter,
+            margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
+            alignment: Alignment.topRight,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.asset('assets/images/iotpb.png', fit: BoxFit.scaleDown, height: 250, colorBlendMode: BlendMode.modulate, color: const Color.fromARGB(255, 187, 204, 255).withOpacity(0.9), opacity: const AlwaysStoppedAnimation(.8),),
-                const Text('smart places', style: TextStyle(color: Colors.white, fontSize: 55)),
+                IconButton(
+                  onPressed: (){
+                    setState(() {
+                      indiceAtual = 4;
+                    });
+                  },
+                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                ),
+                
+                const Text('Novo Objeto', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
+              ],
+            ),
+          ),
+          
+          Container(
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 95, 131, 197),
+              border: Border.all(
+                color: const Color.fromARGB(255, 45, 69, 128),
+                width: 1.5,
+              )
+            ),
+            margin: const EdgeInsets.all(50),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                MaterialButton(
+                  padding: const EdgeInsets.fromLTRB(25, 25, 25, 15),
+                  height: 50,
+                  minWidth: 400,
+                  onPressed: (){},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text('Classe do Objeto', style: TextStyle(color: Colors.white, fontSize: 25)),
+                      Icon(Icons.arrow_forward_ios, color: Colors.white),
+                    ],
+                  ),
+                ),
+
+                MaterialButton(
+                  padding: const EdgeInsets.fromLTRB(25, 20, 25, 20),
+                  height: 50,
+                  minWidth: 400,
+                  onPressed: (){
+                    setState(() {
+                      indiceAtual = 6;
+                    });
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text('Habilidades', style: TextStyle(color: Colors.white, fontSize: 25)),
+                      Icon(Icons.arrow_forward_ios, color: Colors.white),
+                    ],
+                  ),
+                ),
+
+                MaterialButton(
+                  padding: const EdgeInsets.fromLTRB(25, 15, 25, 25),
+                  height: 50,
+                  minWidth: 400,
+                  onPressed: (){
+                    setState(() {
+                      indiceAtual = 7;
+                    });
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text('Restrições', style: TextStyle(color: Colors.white, fontSize: 25)),
+                      Icon(Icons.arrow_forward_ios, color: Colors.white),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
 
-          Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: SizedBox(
-              height: 75,
-              width: 240,
-              child: FloatingActionButton.extended(
-                onPressed: (){
-                  //tela rastrearobj
-                },
-                label: const Text('Rastrear Objeto', style: TextStyle(fontSize: 25)),
-                backgroundColor: const Color.fromARGB(255, 236, 85, 135),
-                elevation: 10.0,
-              ),
+          SizedBox(
+            height: 50,
+            width: 150,
+            child: FloatingActionButton.extended(
+              onPressed: (){},
+              label: const Text('Salvar', style: TextStyle(fontSize: 25)),
+              backgroundColor: const Color.fromARGB(255, 236, 85, 135),
+              elevation: 10.0,
+            ),
+          ),
+        ],
+      ),
+
+      //tela habilidades
+      Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
+            alignment: Alignment.topRight,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  onPressed: (){
+                    setState(() {
+                      indiceAtual = 5;
+                    });
+                  },
+                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                ),
+                
+                const Text('Habilidades', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
+              ],
             ),
           ),
 
-          const Padding(
-            padding: EdgeInsets.all(15.0),
-            child: Text('Por favor, certifique-se que o\nnovo objeto esteja conectado a\nmesma rede deste dispositivo.', style: TextStyle(color: Color.fromARGB(139, 165, 181, 207), fontSize: 20), textAlign: TextAlign.center),
-          ),
-        ]
-      ),
-    ),
-
-    //tela ambientes
-    Center(
-      child: Column(
-        children: const [
-          SizedBox(height: 15),
-          
-          Align(
-            alignment: Alignment.topRight,
-            child: Text('Ambientes    ', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
-          ),
-        ],
-      ),
-    ),
-
-    //tela objetos
-    Center(
-      child: Column(
-        children: const [
-          SizedBox(height: 15),
-          
-          Align(
-            alignment: Alignment.topRight,
-            child: Text('Objetos    ', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
-          ),
-        ],
-      ),
-    ),
-    
-    //tela configurações
-    Center(
-      child: Column(
-        children: [
-          const SizedBox(height: 15),
-          
-          const Align(
-            alignment: Alignment.topRight,
-            child: Text('Configurações    ', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: SizedBox(
-              width: 400,
-              child: ExpansionPanelList(
-                expansionCallback: (int index, bool isExpanded) {},
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (BuildContext context, bool isExpanded) {
-                      return const ListTile(
-                        title: Text('Objetos'),
-                      );
-                    },
-                    body: 
-                    
-                    ExpansionPanelList(
-                      expansionCallback: (int index, bool isExpanded) {},
+          ListBody(
+            children: [
+              Container(
+                padding: const EdgeInsets.fromLTRB(30, 30, 30, 15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Data', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 20)),
+                  
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        ExpansionPanel(
-                          headerBuilder: (BuildContext context, bool isExpanded) {
-                            return const ListTile(
-                              title: Text('Ativos'),
-                            );
-                          },
-                          body: const ListTile(
-                            title: Text('Item 1 child'),
-                            subtitle: Text(''),
-                          ),
-                          isExpanded: false,
-                        ),
-                        ExpansionPanel(
-                          headerBuilder: (BuildContext context, bool isExpanded) {
-                            return const ListTile(
-                              title: Text('Inativos'),
-                            );
-                          },
-                          body: const ListTile(
-                            title: Text('Item 2 child'),
-                            subtitle: Text(''),
-                          ),
-                          isExpanded: false,
-                        ),
-                        ExpansionPanel(
-                          headerBuilder: (BuildContext context, bool isExpanded) {
-                            return const ListTile(
-                              title: Text('Banidos'),
-                            );
-                          },
-                          body: const ListTile(
-                            title: Text('Item 3 child'),
-                            subtitle: Text(''),
-                          ),
-                          isExpanded: false,
-                        ),
-                        ExpansionPanel(
-                          headerBuilder: (BuildContext context, bool isExpanded) {
-                            return const ListTile(
-                              title: Text('Qualificados'),
-                            );
-                          },
-                          body: const ListTile(
-                            title: Text('Item 4 child'),
-                            subtitle: Text(''),
-                          ),
-                          isExpanded: false,
+                        const Text('- Fornece a data corrente [dd/mm/aaaa]', style: TextStyle(fontFamily: 'Raleway', color: Color.fromARGB(255, 177, 177, 177), fontSize: 10)),
+
+                        Switch(
+                          activeColor: const Color.fromARGB(255, 59, 232, 65),
+                          value: status, 
+                          onChanged: (value) {
+                            setState(() {
+                              status = value;
+                            });
+                          }
                         ),
                       ],
                     ),
-                    
-                    isExpanded: false,
-                  ),
-                  ExpansionPanel(
-                    headerBuilder: (BuildContext context, bool isExpanded) {
-                      return const ListTile(
-                        title: Text('Círculos Sociais'),
-                      );
-                    },
-                    body: const ListTile(
-                      title: Text('Item 2 child'),
-                      subtitle: Text(''),
-                    ),
-                    isExpanded: false,
-                  ),
-                  ExpansionPanel(
-                    headerBuilder: (BuildContext context, bool isExpanded) {
-                      return const ListTile(
-                        title: Text('Regras de Negócio'),
-                      );
-                    },
-                    body: const ListTile(
-                      title: Text('Item 3 child'),
-                      subtitle: Text(''),
-                    ),
-                    isExpanded: false,
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ),
-        ]
-      ),
-    ),
 
-    //tela perfil
-    Center(
-      child: Column(
-        children: const [
-          SizedBox(height: 15),
-          
-          Align(
-            alignment: Alignment.topRight,
-            child: Text('Perfil    ', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
+              Container(
+                padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Hora', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 20)),
+                  
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text('- Fornece o horário atualizado [hh:mm:ss]', style: TextStyle(fontFamily: 'Raleway', color: Color.fromARGB(255, 177, 177, 177), fontSize: 10)),
+
+                        Switch(
+                          activeColor: const Color.fromARGB(255, 59, 232, 65),
+                          value: status, 
+                          onChanged: (value) {
+                            setState(() {
+                              status = value;
+                            });
+                          }
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
-    ),
-  ];
+
+      //tela restrições
+      Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
+            alignment: Alignment.topRight,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  onPressed: (){
+                    setState(() {
+                      indiceAtual = 5;
+                    });
+                  },
+                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                ),
+                
+                const Text('Restrições', style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 35)),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: (indiceAtual == 0) ? null : null,
-
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -245,7 +499,7 @@ class HomeScreenState extends State<HomeScreen> {
         child: _telas[indiceAtual]
       ),
       
-      bottomNavigationBar: (indiceAtual < 5) ? BottomNavigationBar(
+      bottomNavigationBar: (indiceAtual < 4) ? BottomNavigationBar(
         type:BottomNavigationBarType.fixed,
         iconSize: 50,
         selectedFontSize: 15,
@@ -256,13 +510,8 @@ class HomeScreenState extends State<HomeScreen> {
         backgroundColor: const Color.fromARGB(255, 165, 181, 207),
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Início',
-          ),
-
-          BottomNavigationBarItem(
             //icon: Icon(Icons.maps_home_work_sharp),
-            //icon: Icon(Icons.villa),
+            //icon: Icon(Icons.home),
             icon: Icon(Icons.dashboard_sharp),
             label: 'Ambientes',
           ),
@@ -282,7 +531,38 @@ class HomeScreenState extends State<HomeScreen> {
             label: 'Perfil',
           ),
         ]
-      ) : null,
+      ) : ((indiceAtual == 4) ? BottomNavigationBar(
+        type:BottomNavigationBarType.fixed,
+        iconSize: 50,
+        selectedFontSize: 15,
+        unselectedFontSize: 15,
+        onTap: onTabTapped,
+        fixedColor: const Color.fromARGB(255, 62, 62, 80).withOpacity(0.85),
+        backgroundColor: const Color.fromARGB(255, 165, 181, 207),
+        items: const [
+          BottomNavigationBarItem(
+            //icon: Icon(Icons.maps_home_work_sharp),
+            //icon: Icon(Icons.home),
+            icon: Icon(Icons.dashboard_sharp),
+            label: 'Ambientes',
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.hub),
+            label: 'Objetos',
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Configurações',
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Perfil',
+          ),
+        ]
+      ) : null),
     );
   }
 
