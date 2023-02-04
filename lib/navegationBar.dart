@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
@@ -44,7 +43,6 @@ class BotNavBar extends StatelessWidget {
         ]);
   }
 }
-=======
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
@@ -90,4 +88,3 @@ class BotNavBar extends StatelessWidget {
         ]);
   }
 }
->>>>>>> b6f253ef6ed1860c9432d5c8e1978014f3710992
