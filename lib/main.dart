@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../telaObjetos.dart';
+import '/telaObjetos.dart';
+import '/telaRestricoes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'smart places',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue, //mudei varias vezes n lembro a riginal :/
       ),
       home: const App(),
     );
@@ -372,9 +373,15 @@ class AppState extends State<App> {
                   height: 50,
                   minWidth: 400,
                   onPressed: () {
-                    setState(() {
-                      indiceAtual = 7;
-                    });
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const restricoes()),
+                    );
+                    // setState(() {
+                    //   indiceAtual = 7;
+                    // });
+                    //const restricoes();
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -496,32 +503,33 @@ class AppState extends State<App> {
       ),
 
       //tela restrições
-      Column(
-        children: [
-          Container(
-            margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
-            alignment: Alignment.topRight,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    setState(() {
-                      indiceAtual = 5;
-                    });
-                  },
-                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-                ),
-                const Text('Restrições',
-                    style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Colors.white,
-                        fontSize: 35)),
-              ],
-            ),
-          ),
-        ],
-      ),
+      // Column(
+      //   children: [
+      //     Container(
+      //       margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
+      //       alignment: Alignment.topRight,
+      //       child: Row(
+      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //         children: [
+      //           IconButton(
+      //             onPressed: () {
+      //               // setState(() {
+      //               //   indiceAtual = 5;
+      //               // });
+      //               // const restricoes();
+      //             },
+      //             icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+      //           ),
+      //           const Text('Restrições',
+      //               style: TextStyle(
+      //                   fontFamily: 'Raleway',
+      //                   color: Colors.white,
+      //                   fontSize: 35)),
+      //         ],
+      //       ),
+      //     ),
+      //   ],
+      // ),
     ];
   }
 
