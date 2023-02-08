@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/telaObjetos.dart';
+import 'telaObjetos.dart';
 import '/telaRestricoes.dart';
 
 void main() {
@@ -29,7 +29,7 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
-  int indiceAtual = 4;
+  int indiceAtual = 5;
   bool status = true;
   late final List<Widget> _telas;
 
@@ -85,7 +85,8 @@ class AppState extends State<App> {
               ],
             ),
           ),
-          const BoxThatContainsText(),
+
+          //const BoxThatContainsText(),
         ],
       ),
 
@@ -333,11 +334,12 @@ class AppState extends State<App> {
                   width: 1.5,
                 )),
             margin: const EdgeInsets.all(50),
+            padding: const EdgeInsets.all(5),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 MaterialButton(
-                  padding: const EdgeInsets.fromLTRB(25, 25, 25, 15),
+                  //padding: const EdgeInsets.fromLTRB(25, 25, 25, 15),
                   height: 50,
                   minWidth: 400,
                   onPressed: () {},
@@ -351,7 +353,7 @@ class AppState extends State<App> {
                   ),
                 ),
                 MaterialButton(
-                  padding: const EdgeInsets.fromLTRB(25, 20, 25, 20),
+                  //padding: const EdgeInsets.fromLTRB(25, 20, 25, 20),
                   height: 50,
                   minWidth: 400,
                   onPressed: () {
@@ -369,7 +371,7 @@ class AppState extends State<App> {
                   ),
                 ),
                 MaterialButton(
-                  padding: const EdgeInsets.fromLTRB(25, 15, 25, 25),
+                  //padding: const EdgeInsets.fromLTRB(25, 15, 25, 25),
                   height: 50,
                   minWidth: 400,
                   onPressed: () {
