@@ -28,6 +28,13 @@ class App extends StatefulWidget {
   AppState createState() => AppState();
 }
 
+void goTelaRestri() {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const restricoes()),
+  );
+}
+
 class AppState extends State<App> {
   int indiceAtual = 2;
   bool status = true;
@@ -123,7 +130,7 @@ class AppState extends State<App> {
                     width: 1.5,
                   )),
               margin: const EdgeInsets.all(50),
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -143,9 +150,10 @@ class AppState extends State<App> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text('Ativos',
-                                  style:
-                                      TextStyle(color: Colors.white, fontSize: 25)),
-                              Icon(Icons.arrow_forward_ios, color: Colors.white),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 25)),
+                              Icon(Icons.arrow_forward_ios,
+                                  color: Colors.white),
                             ],
                           ),
                         ),
@@ -157,9 +165,10 @@ class AppState extends State<App> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text('Inativos',
-                                  style:
-                                      TextStyle(color: Colors.white, fontSize: 25)),
-                              Icon(Icons.arrow_forward_ios, color: Colors.white),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 25)),
+                              Icon(Icons.arrow_forward_ios,
+                                  color: Colors.white),
                             ],
                           ),
                         ),
@@ -171,9 +180,10 @@ class AppState extends State<App> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text('Banidos',
-                                  style:
-                                      TextStyle(color: Colors.white, fontSize: 25)),
-                              Icon(Icons.arrow_forward_ios, color: Colors.white),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 25)),
+                              Icon(Icons.arrow_forward_ios,
+                                  color: Colors.white),
                             ],
                           ),
                         ),
@@ -185,9 +195,10 @@ class AppState extends State<App> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text('Qualificados',
-                                  style:
-                                      TextStyle(color: Colors.white, fontSize: 25)),
-                              Icon(Icons.arrow_forward_ios, color: Colors.white),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 25)),
+                              Icon(Icons.arrow_forward_ios,
+                                  color: Colors.white),
                             ],
                           ),
                         ),
@@ -217,7 +228,6 @@ class AppState extends State<App> {
                       children: const [
                         Text('Regras de Negócio',
                             style:
-                                //mudei o tamanho (24), n vi diferença, 25 passa da borda
                                 TextStyle(color: Colors.white, fontSize: 25)),
                         Icon(Icons.arrow_forward_ios, color: Colors.white),
                       ],
