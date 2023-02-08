@@ -217,7 +217,7 @@ class AppState extends State<App> {
                         Text('Regras de Negócio',
                             style:
                                 //mudei o tamanho (24), n vi diferença, 25 passa da borda
-                                TextStyle(color: Colors.white, fontSize: 24)),
+                                TextStyle(color: Colors.white, fontSize: 25)),
                         Icon(Icons.arrow_forward_ios, color: Colors.white),
                       ],
                     ),
