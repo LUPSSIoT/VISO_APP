@@ -470,7 +470,6 @@ class AppState extends State<App> {
                     // setState(() {
                     //   indiceAtual = 7;
                     // });
-                    //const restricoes();
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
