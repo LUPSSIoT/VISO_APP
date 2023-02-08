@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'smart places',
       theme: ThemeData(
-        primarySwatch: Colors.blue, //mudei varias vezes n lembro a riginal :/
+        primarySwatch: Colors.blue,
       ),
       home: const App(),
     );
@@ -94,7 +94,6 @@ class AppState extends State<App> {
               const Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 15),
               ),
-
               MaterialButton(
                 height: 80,
                 minWidth: 400,
@@ -130,15 +129,15 @@ class AppState extends State<App> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text('Objeto 2',
-                        style: TextStyle(
-                            fontFamily: 'Raleway',
-                            color: Colors.white,
-                            fontSize: 20)),
+                          style: TextStyle(
+                              fontFamily: 'Raleway',
+                              color: Colors.white,
+                              fontSize: 20)),
                       Text('- Fabricante: SAMSUNG',
-                        style: TextStyle(
-                            fontFamily: 'Raleway',
-                            color: Color.fromARGB(255, 177, 177, 177),
-                            fontSize: 10)),
+                          style: TextStyle(
+                              fontFamily: 'Raleway',
+                              color: Color.fromARGB(255, 177, 177, 177),
+                              fontSize: 10)),
                     ],
                   ),
                 ),
@@ -154,15 +153,15 @@ class AppState extends State<App> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text('Objeto 3',
-                        style: TextStyle(
-                            fontFamily: 'Raleway',
-                            color: Colors.white,
-                            fontSize: 20)),
+                          style: TextStyle(
+                              fontFamily: 'Raleway',
+                              color: Colors.white,
+                              fontSize: 20)),
                       Text('- Fabricante: Motorola',
-                        style: TextStyle(
-                            fontFamily: 'Raleway',
-                            color: Color.fromARGB(255, 177, 177, 177),
-                            fontSize: 10)),
+                          style: TextStyle(
+                              fontFamily: 'Raleway',
+                              color: Color.fromARGB(255, 177, 177, 177),
+                              fontSize: 10)),
                     ],
                   ),
                 ),
@@ -306,11 +305,7 @@ class AppState extends State<App> {
                       children: const [
                         Text('Regras de Negócio',
                             style:
-<<<<<<< HEAD
                                 TextStyle(color: Colors.white, fontSize: 25)),
-=======
-                              TextStyle(color: Colors.white, fontSize: 25)),
->>>>>>> a72b42efefe24c1ef834b6ec75d9c3694b291fb9
                         Icon(Icons.arrow_forward_ios, color: Colors.white),
                       ],
                     ),
