@@ -28,15 +28,8 @@ class App extends StatefulWidget {
   AppState createState() => AppState();
 }
 
-void goTelaRestri() {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const restricoes()),
-  );
-}
-
 class AppState extends State<App> {
-  int indiceAtual = 2;
+  int indiceAtual = 1;
   bool status = true;
   late final List<Widget> _telas;
 
@@ -93,7 +86,89 @@ class AppState extends State<App> {
             ),
           ),
 
+          //tela objeto
           //const BoxThatContainsText(),
+
+          ListBody(
+            children: [
+              const Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 15),
+              ),
+
+              MaterialButton(
+                height: 80,
+                minWidth: 400,
+                onPressed: () {},
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  padding: const EdgeInsets.all(15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text('Objeto 1',
+                          style: TextStyle(
+                              fontFamily: 'Raleway',
+                              color: Colors.white,
+                              fontSize: 20)),
+                      Text('- Fabricante: LG',
+                          style: TextStyle(
+                              fontFamily: 'Raleway',
+                              color: Color.fromARGB(255, 177, 177, 177),
+                              fontSize: 10)),
+                    ],
+                  ),
+                ),
+              ),
+              MaterialButton(
+                height: 80,
+                minWidth: 400,
+                onPressed: () {},
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  padding: const EdgeInsets.all(15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text('Objeto 2',
+                        style: TextStyle(
+                            fontFamily: 'Raleway',
+                            color: Colors.white,
+                            fontSize: 20)),
+                      Text('- Fabricante: SAMSUNG',
+                        style: TextStyle(
+                            fontFamily: 'Raleway',
+                            color: Color.fromARGB(255, 177, 177, 177),
+                            fontSize: 10)),
+                    ],
+                  ),
+                ),
+              ),
+              MaterialButton(
+                height: 80,
+                minWidth: 400,
+                onPressed: () {},
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  padding: const EdgeInsets.all(15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text('Objeto 3',
+                        style: TextStyle(
+                            fontFamily: 'Raleway',
+                            color: Colors.white,
+                            fontSize: 20)),
+                      Text('- Fabricante: Motorola',
+                        style: TextStyle(
+                            fontFamily: 'Raleway',
+                            color: Color.fromARGB(255, 177, 177, 177),
+                            fontSize: 10)),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
 
@@ -134,10 +209,13 @@ class AppState extends State<App> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Objetos',
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 173, 173, 173),
-                          fontSize: 25)),
+                  const Padding(
+                    padding: EdgeInsets.all(2),
+                    child: Text('Objetos',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 173, 173, 173),
+                            fontSize: 25)),
+                  ),
                   Container(
                     padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
                     child: Column(
@@ -228,7 +306,11 @@ class AppState extends State<App> {
                       children: const [
                         Text('Regras de Negócio',
                             style:
+<<<<<<< HEAD
                                 TextStyle(color: Colors.white, fontSize: 25)),
+=======
+                              TextStyle(color: Colors.white, fontSize: 25)),
+>>>>>>> a72b42efefe24c1ef834b6ec75d9c3694b291fb9
                         Icon(Icons.arrow_forward_ios, color: Colors.white),
                       ],
                     ),
@@ -344,7 +426,7 @@ class AppState extends State<App> {
                   width: 1.5,
                 )),
             margin: const EdgeInsets.all(50),
-            padding: const EdgeInsets.all(5),
+            padding: const EdgeInsets.all(8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
