@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'telaObjetos.dart';
+//import 'telaObjetos.dart';
 import '/telaRestricoes.dart';
 
 void main() {
@@ -458,7 +458,6 @@ class AppState extends State<App> {
                   ),
                 ),
                 MaterialButton(
-                  //padding: const EdgeInsets.fromLTRB(25, 15, 25, 25),
                   height: 50,
                   minWidth: 400,
                   onPressed: () {
