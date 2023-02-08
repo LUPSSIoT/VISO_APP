@@ -29,7 +29,7 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
-  int indiceAtual = 5;
+  int indiceAtual = 2;
   bool status = true;
   late final List<Widget> _telas;
 
@@ -123,77 +123,78 @@ class AppState extends State<App> {
                     width: 1.5,
                   )),
               margin: const EdgeInsets.all(50),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const Text('Objetos',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 173, 173, 173),
+                          fontSize: 25)),
                   Container(
-                      padding: const EdgeInsets.fromLTRB(20, 15, 0, 5),
-                      child: const Text('Objetos',
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 173, 173, 173),
-                              fontSize: 25))),
-                  MaterialButton(
-                    padding: const EdgeInsets.fromLTRB(55, 0, 25, 5),
-                    height: 50,
-                    minWidth: 400,
-                    onPressed: () {},
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text('Ativos',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 25)),
-                        Icon(Icons.arrow_forward_ios, color: Colors.white),
+                    padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                    child: Column(
+                      children: [
+                        MaterialButton(
+                          height: 50,
+                          minWidth: 400,
+                          onPressed: () {},
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Text('Ativos',
+                                  style:
+                                      TextStyle(color: Colors.white, fontSize: 25)),
+                              Icon(Icons.arrow_forward_ios, color: Colors.white),
+                            ],
+                          ),
+                        ),
+                        MaterialButton(
+                          height: 50,
+                          minWidth: 400,
+                          onPressed: () {},
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Text('Inativos',
+                                  style:
+                                      TextStyle(color: Colors.white, fontSize: 25)),
+                              Icon(Icons.arrow_forward_ios, color: Colors.white),
+                            ],
+                          ),
+                        ),
+                        MaterialButton(
+                          height: 50,
+                          minWidth: 400,
+                          onPressed: () {},
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Text('Banidos',
+                                  style:
+                                      TextStyle(color: Colors.white, fontSize: 25)),
+                              Icon(Icons.arrow_forward_ios, color: Colors.white),
+                            ],
+                          ),
+                        ),
+                        MaterialButton(
+                          height: 50,
+                          minWidth: 400,
+                          onPressed: () {},
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Text('Qualificados',
+                                  style:
+                                      TextStyle(color: Colors.white, fontSize: 25)),
+                              Icon(Icons.arrow_forward_ios, color: Colors.white),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
                   MaterialButton(
-                    padding: const EdgeInsets.fromLTRB(55, 10, 25, 5),
-                    height: 50,
-                    minWidth: 400,
-                    onPressed: () {},
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text('Inativos',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 25)),
-                        Icon(Icons.arrow_forward_ios, color: Colors.white),
-                      ],
-                    ),
-                  ),
-                  MaterialButton(
-                    padding: const EdgeInsets.fromLTRB(55, 10, 25, 5),
-                    height: 50,
-                    minWidth: 400,
-                    onPressed: () {},
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text('Banidos',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 25)),
-                        Icon(Icons.arrow_forward_ios, color: Colors.white),
-                      ],
-                    ),
-                  ),
-                  MaterialButton(
-                    padding: const EdgeInsets.fromLTRB(55, 10, 25, 10),
-                    height: 50,
-                    minWidth: 400,
-                    onPressed: () {},
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text('Qualificados',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 25)),
-                        Icon(Icons.arrow_forward_ios, color: Colors.white),
-                      ],
-                    ),
-                  ),
-                  MaterialButton(
-                    padding: const EdgeInsets.fromLTRB(30, 10, 25, 10),
                     height: 50,
                     minWidth: 400,
                     onPressed: () {},
@@ -208,7 +209,6 @@ class AppState extends State<App> {
                     ),
                   ),
                   MaterialButton(
-                    padding: const EdgeInsets.fromLTRB(30, 15, 25, 25),
                     height: 50,
                     minWidth: 400,
                     onPressed: () {},
