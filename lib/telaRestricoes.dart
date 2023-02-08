@@ -1,4 +1,6 @@
 // ignore_for_file: camel_case_types, file_names
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class restricoes extends StatefulWidget {
@@ -9,10 +11,8 @@ class restricoes extends StatefulWidget {
 }
 
 class _restricoesState extends State<restricoes> {
-  double _currentSliderPrimaryValue = 0.2;
-
-  double _currentSliderSecondaryValue = 0.5;
-
+  var _currentSliderValue = <double>[20.0, 99.0, 50.0, 70.0, 0.0];
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,14 +77,37 @@ class _restricoesState extends State<restricoes> {
                 ),
               ),
             ),
-            Slider(
-              value: _currentSliderPrimaryValue,
-              label: _currentSliderPrimaryValue.round().toString(),
-              onChanged: (double value) {
-                setState(() {
-                  _currentSliderPrimaryValue = value;
-                });
-              },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 400,
+                  child: Slider(
+                    min: 0,
+                    max: 99,
+                    divisions: 99,
+                    value: _currentSliderValue[0],
+                    //label: _currentSliderPrimaryValue.round().toString(),
+                    onChanged: (double value) {
+                      setState(() {
+                        _currentSliderValue[0] = value;
+                      });
+                    },
+                  ),
+                ),
+
+                SizedBox(
+                  width: 20,
+                  child: Text('${_currentSliderValue[0].round()}', 
+                    style: const TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.grey,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
             const Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 170, 0),
@@ -112,14 +135,37 @@ class _restricoesState extends State<restricoes> {
                 ),
               ),
             ),
-            Slider(
-              value: _currentSliderSecondaryValue,
-              label: _currentSliderSecondaryValue.round().toString(),
-              onChanged: (double value) {
-                setState(() {
-                  _currentSliderSecondaryValue = value;
-                });
-              },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 400,
+                  child: Slider(
+                    min: 0,
+                    max: 99,
+                    divisions: 99,
+                    value: _currentSliderValue[1],
+                    //label: _currentSliderPrimaryValue.round().toString(),
+                    onChanged: (double value) {
+                      setState(() {
+                        _currentSliderValue[1] = value;
+                      });
+                    },
+                  ),
+                ),
+
+                SizedBox(
+                  width: 20,
+                  child: Text('${_currentSliderValue[1].round()}', 
+                    style: const TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.grey,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
             const Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 200, 0),
@@ -147,14 +193,37 @@ class _restricoesState extends State<restricoes> {
                 ),
               ),
             ),
-            Slider(
-              value: _currentSliderSecondaryValue,
-              label: _currentSliderSecondaryValue.round().toString(),
-              onChanged: (double value) {
-                setState(() {
-                  _currentSliderSecondaryValue = value;
-                });
-              },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 400,
+                  child: Slider(
+                    min: 0,
+                    max: 99,
+                    divisions: 99,
+                    value: _currentSliderValue[2],
+                    //label: _currentSliderPrimaryValue.round().toString(),
+                    onChanged: (double value) {
+                      setState(() {
+                        _currentSliderValue[2] = value;
+                      });
+                    },
+                  ),
+                ),
+
+                SizedBox(
+                  width: 20,
+                  child: Text('${_currentSliderValue[2].round()}', 
+                    style: const TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.grey,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
             const Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 230, 0),
@@ -182,14 +251,37 @@ class _restricoesState extends State<restricoes> {
                 ),
               ),
             ),
-            Slider(
-              value: _currentSliderSecondaryValue,
-              label: _currentSliderSecondaryValue.round().toString(),
-              onChanged: (double value) {
-                setState(() {
-                  _currentSliderSecondaryValue = value;
-                });
-              },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 400,
+                  child: Slider(
+                    min: 0,
+                    max: 99,
+                    divisions: 99,
+                    value: _currentSliderValue[3],
+                    //label: _currentSliderPrimaryValue.round().toString(),
+                    onChanged: (double value) {
+                      setState(() {
+                        _currentSliderValue[3] = value;
+                      });
+                    },
+                  ),
+                ),
+
+                SizedBox(
+                  width: 20,
+                  child: Text('${_currentSliderValue[3].round()}', 
+                    style: const TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.grey,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
             const Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 105, 0),
@@ -217,14 +309,37 @@ class _restricoesState extends State<restricoes> {
                 ),
               ),
             ),
-            Slider(
-              value: _currentSliderSecondaryValue,
-              label: _currentSliderSecondaryValue.round().toString(),
-              onChanged: (double value) {
-                setState(() {
-                  _currentSliderSecondaryValue = value;
-                });
-              },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 400,
+                  child: Slider(
+                    min: 0,
+                    max: 99,
+                    divisions: 99,
+                    value: _currentSliderValue[4],
+                    //label: _currentSliderPrimaryValue.round().toString(),
+                    onChanged: (double value) {
+                      setState(() {
+                        _currentSliderValue[4] = value;
+                      });
+                    },
+                  ),
+                ),
+
+                SizedBox(
+                  width: 20,
+                  child: Text('${_currentSliderValue[4].round()}', 
+                    style: const TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.grey,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
