@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 //import 'telaObjetos.dart';
-import '/telaRestricoes.dart';
+import 'telaRestricoes..dart';
+import 'telaHabilidades.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaterialApp(home: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -506,9 +507,11 @@ class AppState extends State<App> {
               children: [
                 IconButton(
                   onPressed: () {
-                    setState(() {
-                      indiceAtual = 5;
-                    });
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const habilidades()),
+                    );
                   },
                   icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                 ),
@@ -519,72 +522,6 @@ class AppState extends State<App> {
                         fontSize: 35)),
               ],
             ),
-          ),
-          ListBody(
-            children: [
-              Container(
-                padding: const EdgeInsets.fromLTRB(30, 30, 30, 15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text('Data',
-                        style: TextStyle(
-                            fontFamily: 'Raleway',
-                            color: Colors.white,
-                            fontSize: 20)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text('- Fornece a data corrente [dd/mm/aaaa]',
-                            style: TextStyle(
-                                fontFamily: 'Raleway',
-                                color: Color.fromARGB(255, 177, 177, 177),
-                                fontSize: 10)),
-                        Switch(
-                            activeColor: const Color.fromARGB(255, 59, 232, 65),
-                            value: status,
-                            onChanged: (value) {
-                              setState(() {
-                                status = value;
-                              });
-                            }),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text('Hora',
-                        style: TextStyle(
-                            fontFamily: 'Raleway',
-                            color: Colors.white,
-                            fontSize: 20)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text('- Fornece o horário atualizado [hh:mm:ss]',
-                            style: TextStyle(
-                                fontFamily: 'Raleway',
-                                color: Color.fromARGB(255, 177, 177, 177),
-                                fontSize: 10)),
-                        Switch(
-                            activeColor: const Color.fromARGB(255, 59, 232, 65),
-                            value: status,
-                            onChanged: (value) {
-                              setState(() {
-                                status = value;
-                              });
-                            }),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
           ),
         ],
       ),
