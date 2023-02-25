@@ -1,86 +1,80 @@
-// ignore_for_file: file_names, camel_case_types
+// ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+// ignore_for_file: file_names
+// por enquanto aqui só tem a caixa de texto da tela, o resto ta na main,
+// no futuro colocar toda tela aqui!
 
 class telObj extends StatelessWidget {
   const telObj({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ListBody(
+    return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.fromLTRB(0, 0, 0, 15),
-        ),
-        MaterialButton(
-          height: 80,
-          minWidth: 400,
-          onPressed: () {},
+        Padding(
+          padding: const EdgeInsets.fromLTRB(45, 10, 50, 5),
           child: Container(
-            alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.all(15),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text('Objeto 1',
-                    style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Colors.white,
-                        fontSize: 20)),
-                Text('- Fabricante: LG',
-                    style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Color.fromARGB(255, 177, 177, 177),
-                        fontSize: 10)),
-              ],
+            alignment: Alignment.topLeft,
+            color: const Color.fromARGB(255, 255, 255, 255),
+            width: 300,
+            height: 250,
+            //child: const Align(
+            child: const Text(
+              "   Identificação\n Mac: \n", // assim não da kkkk mas ta ruim de alinhar
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                color: Color.fromARGB(255, 0, 0, 0),
+                fontSize: 30,
+              ),
             ),
           ),
         ),
-        MaterialButton(
-          height: 80,
-          minWidth: 400,
-          onPressed: () {},
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 155, 5),
           child: Container(
-            alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.all(15),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text('Objeto 2',
-                    style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Colors.white,
-                        fontSize: 20)),
-                Text('- Fabricante: SAMSUNG',
-                    style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Color.fromARGB(255, 177, 177, 177),
-                        fontSize: 10)),
-              ],
+            //alignment: Alignment.topLeft,
+            color: const Color.fromARGB(255, 255, 255, 255),
+            width: 145,
+            height: 145,
+            child: const Text(
+              "CIMA ESQ",
+              style: TextStyle(
+                color: Color.fromARGB(255, 0, 0, 0),
+                fontSize: 30,
+              ),
             ),
           ),
         ),
-        MaterialButton(
-          height: 80,
-          minWidth: 400,
-          onPressed: () {},
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 155, 0),
           child: Container(
-            alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.all(15),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text('Objeto 3',
-                    style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Colors.white,
-                        fontSize: 20)),
-                Text('- Fabricante: Motorola',
-                    style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Color.fromARGB(255, 177, 177, 177),
-                        fontSize: 10)),
-              ],
+            margin: const EdgeInsets.fromLTRB(45, 0, 45, 0),
+            color: const Color.fromARGB(255, 255, 255, 255),
+            width: 145,
+            height: 145,
+            child: const Text(
+              "BAIXOS ESQ",
+              style: TextStyle(
+                color: Color.fromARGB(255, 0, 0, 0),
+                fontSize: 30,
+              ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 155, 0),
+          child: Container(
+            margin: const EdgeInsets.fromLTRB(145, 0, 0, 0),
+            color: const Color.fromARGB(255, 255, 255, 255),
+            width: 145,
+            height: 145,
+            child: const Text(
+              "CIMA ESQ",
+              style: TextStyle(
+                color: Color.fromARGB(255, 0, 0, 0),
+                fontSize: 30,
+              ),
             ),
           ),
         ),
