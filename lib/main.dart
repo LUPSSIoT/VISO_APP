@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart'; // para fazer a barra de navegaçao
-import 'telaAmbientes.dart';
-import 'telaInicial.dart';
-import 'telaObjetos.dart';
-// import 'telaObjetos.dart';
-// import 'telaRestricoes..dart';
-// import 'telaHabilidades.dart';
-import 'telaConfiguracao.dart';
-import 'telaPerfil.dart';
+import 'tela_ambientes.dart';
+import 'tela_inicio.dart';
+import 'tela_objetos.dart';
+import 'tela_configuracoes.dart';
+import 'tela_perfil.dart';
 
 void main() {
   runApp(const MaterialApp(home: MyApp()));
@@ -37,70 +33,69 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
-  late int _indiceAtual = 1;
-  bool status = true;
+  int _indiceAtual = 0;
   late List<Widget> _telas;
 
   @override
   void initState() {
-    _indiceAtual = 0;
-    _telas = [
-      const telInicio(),
-      const telAmbientes(),
-      const telObjs(),
-      const telConfig(),
-      const telPerf(),
-    ];
     super.initState();
-
-    // tela inicial ///////
+    
+    _telas = const [
+      TelaInicio(),
+      TelaAmbientes(),
+      TelaObjetos(),
+      TelaConfiguracoes(),
+      TelaPerfil(),
+    ];
   }
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoTabScaffold(
-        tabBar: CupertinoTabBar(
-          currentIndex: _indiceAtual,
-          onTap: onTabTapped,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Inicio",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Ambientes",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Objetos",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Configurações",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Perfil",
-            ),
-          ],
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+            Color.fromARGB(255, 91, 129, 200),
+            Color.fromARGB(255, 45, 69, 128)
+            ])
         ),
-        tabBuilder: (BuildContext context, int index) {
-          return CupertinoTabView(
-            builder: (BuildContext context) {
-              return SafeArea(
-                top: false,
-                bottom: false,
-                child: CupertinoApp(
-                  home: CupertinoPageScaffold(
-                    resizeToAvoidBottomInset: false,
-                    child: _telas[_indiceAtual],
-                  ),
-                ),
-              );
-            },
-          );
-        });
+        child: _telas[_indiceAtual]),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        iconSize: 50,
+        selectedFontSize: 15,
+        unselectedFontSize: 15,
+        currentIndex: _indiceAtual,
+        onTap: onTabTapped,
+        fixedColor: Colors.black,
+        backgroundColor: const Color.fromARGB(255, 165, 181, 207),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Início',
+          ),
+          BottomNavigationBarItem(
+            //icon: Icon(Icons.maps_home_work_sharp),
+            icon: Icon(Icons.dashboard_sharp),
+            label: 'Ambientes',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.hub),
+            label: 'Objetos',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Configurações',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Perfil',
+          ),
+        ])
+    );
   }
 
   void onTabTapped(int index) {
