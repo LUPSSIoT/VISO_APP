@@ -56,7 +56,7 @@ class TelaObjetos extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const TelaObjeto()),
+                      MaterialPageRoute(builder: (context) => const TelaObjeto("Objeto 1", "LG")),
                     );
                   },
                   child: Container(
@@ -85,7 +85,7 @@ class TelaObjetos extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const TelaObjeto()),
+                      MaterialPageRoute(builder: (context) => const TelaObjeto("Objeto 2", "SAMSUNG")),
                     );
                   },
                   child: Container(
@@ -114,7 +114,7 @@ class TelaObjetos extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const TelaObjeto()),
+                      MaterialPageRoute(builder: (context) => const TelaObjeto("Objeto 3", "Motorola")),
                     );
                   },
                   child: Container(
