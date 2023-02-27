@@ -65,8 +65,13 @@ class _TelaObjetoState extends State<TelaObjeto> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 45, 69, 128),
+                          width: 1.5,
+                        )),
                     margin: const EdgeInsets.fromLTRB(0, 14, 7, 0),
-                    color: const Color.fromARGB(255, 255, 255, 255),
                     width: 165,
                     height: 120,
                     child: Column(
@@ -78,7 +83,7 @@ class _TelaObjetoState extends State<TelaObjeto> {
                                 color: Color.fromARGB(255, 91, 129, 200),
                                 fontSize: 25)),
                         Container(
-                          margin: const EdgeInsets.all(10),
+                          margin: const EdgeInsets.all(8),
                           child: Text((status) ? "ATIVO" : "INATIVO",
                               textAlign: TextAlign.center,
                               style: const TextStyle(
@@ -97,8 +102,13 @@ class _TelaObjetoState extends State<TelaObjeto> {
                     ),
                   ),
                   Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 45, 69, 128),
+                          width: 1.5,
+                        )),
                     margin: const EdgeInsets.fromLTRB(7, 14, 0, 0),
-                    color: const Color.fromARGB(255, 255, 255, 255),
                     width: 165,
                     height: 120,
                     child: const Text("Confiança",
@@ -114,8 +124,13 @@ class _TelaObjetoState extends State<TelaObjeto> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 45, 69, 128),
+                          width: 1.5,
+                        )),
                     margin: const EdgeInsets.fromLTRB(0, 14, 7, 0),
-                    color: const Color.fromARGB(255, 255, 255, 255),
                     width: 165,
                     height: 120,
                     child: const Text("Rede",
@@ -126,8 +141,13 @@ class _TelaObjetoState extends State<TelaObjeto> {
                             fontSize: 25)),
                   ),
                   Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 45, 69, 128),
+                          width: 1.5,
+                        )),
                     margin: const EdgeInsets.fromLTRB(7, 14, 0, 0),
-                    color: const Color.fromARGB(255, 255, 255, 255),
                     width: 165,
                     height: 120,
                     child: const Text("Sinal",
