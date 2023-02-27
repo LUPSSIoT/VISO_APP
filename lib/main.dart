@@ -40,12 +40,12 @@ class AppState extends State<App> {
   void initState() {
     super.initState();
 
-    _telas = const [
-      TelaInicio(),
-      TelaAmbientes(),
-      TelaObjetos(),
-      TelaConfiguracoes(),
-      TelaPerfil(),
+    _telas = [
+      const TelaInicio(),
+      TelaAmbientes(voltarTelaInicio),
+      TelaObjetos(voltarTelaInicio),
+      TelaConfiguracoes(voltarTelaInicio),
+      TelaPerfil(voltarTelaInicio),
     ];
   }
 
