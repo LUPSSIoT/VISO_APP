@@ -8,14 +8,13 @@ class TelaInicio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-          Color.fromARGB(255, 91, 129, 200),
-          Color.fromARGB(255, 45, 69, 128)
-          ])
-      ),
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+            Color.fromARGB(255, 91, 129, 200),
+            Color.fromARGB(255, 45, 69, 128)
+          ])),
       child: Center(
         child: Column(children: [
           Container(
@@ -29,7 +28,7 @@ class TelaInicio extends StatelessWidget {
                   height: 250,
                   colorBlendMode: BlendMode.modulate,
                   color:
-                    const Color.fromARGB(255, 187, 204, 255).withOpacity(0.9),
+                      const Color.fromARGB(255, 187, 204, 255).withOpacity(0.9),
                   opacity: const AlwaysStoppedAnimation(.8),
                 ),
                 const Text('smart places',
@@ -46,10 +45,12 @@ class TelaInicio extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const TelaNovoObjeto()),
+                    MaterialPageRoute(
+                        builder: (context) => const TelaNovoObjeto()),
                   );
                 },
-                label: const Text('Rastrear Objeto', style: TextStyle(fontSize: 25)),
+                label: const Text('Rastrear Objeto',
+                    style: TextStyle(fontSize: 25)),
                 backgroundColor: const Color.fromARGB(255, 236, 85, 135),
                 elevation: 10.0,
               ),

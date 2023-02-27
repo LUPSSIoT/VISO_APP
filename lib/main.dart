@@ -39,53 +39,52 @@ class AppState extends State<App> {
   @override
   void initState() {
     super.initState();
-    
-    _telas = [
-      const TelaInicio(),
-      TelaAmbientes(voltarTelaInicio),
-      TelaObjetos(voltarTelaInicio),
-      TelaConfiguracoes(voltarTelaInicio),
-      TelaPerfil(voltarTelaInicio),
+
+    _telas = const [
+      TelaInicio(),
+      TelaAmbientes(),
+      TelaObjetos(),
+      TelaConfiguracoes(),
+      TelaPerfil(),
     ];
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _telas[_indiceAtual],
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        iconSize: 50,
-        selectedFontSize: 15,
-        unselectedFontSize: 15,
-        currentIndex: _indiceAtual,
-        onTap: onTabTapped,
-        fixedColor: Colors.black,
-        backgroundColor: const Color.fromARGB(255, 165, 181, 207),
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Início',
-          ),
-          BottomNavigationBarItem(
-            //icon: Icon(Icons.maps_home_work_sharp),
-            icon: Icon(Icons.dashboard_sharp),
-            label: 'Ambientes',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.hub),
-            label: 'Objetos',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Configurações',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Perfil',
-          ),
-        ])
-    );
+        body: _telas[_indiceAtual],
+        bottomNavigationBar: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            iconSize: 50,
+            selectedFontSize: 15,
+            unselectedFontSize: 15,
+            currentIndex: _indiceAtual,
+            onTap: onTabTapped,
+            fixedColor: Colors.black,
+            backgroundColor: const Color.fromARGB(255, 165, 181, 207),
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'Início',
+              ),
+              BottomNavigationBarItem(
+                //icon: Icon(Icons.maps_home_work_sharp),
+                icon: Icon(Icons.dashboard_sharp),
+                label: 'Ambientes',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.hub),
+                label: 'Objetos',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.settings),
+                label: 'Configurações',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: 'Perfil',
+              ),
+            ]));
   }
 
   void onTabTapped(int index) {

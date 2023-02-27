@@ -9,13 +9,21 @@ class TelaRestricoes extends StatefulWidget {
 }
 
 class _TelaRestricoesState extends State<TelaRestricoes> {
-  final List<double> _currentSliderValue = <double>[20.0, 99.0, 50.0, 70.0, 0.0];
+  final List<double> _currentSliderValue = <double>[
+    20.0,
+    99.0,
+    50.0,
+    70.0,
+    0.0
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Tela(
       "Restrições",
-      () {Navigator.pop(context);},
+      () {
+        Navigator.pop(context);
+      },
       Column(
         children: [
           Padding(

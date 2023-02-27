@@ -4,7 +4,7 @@ import 'tela.dart';
 
 class TelaObjetos extends StatelessWidget {
   final void Function() voltarTelaInicio;
-  
+
   const TelaObjetos(this.voltarTelaInicio, {super.key});
 
   @override
@@ -23,7 +23,8 @@ class TelaObjetos extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const TelaObjeto("Objeto 1", "LG")),
+                MaterialPageRoute(
+                    builder: (context) => const TelaObjeto("Objeto 1", "LG")),
               );
             },
             child: Container(
@@ -52,7 +53,9 @@ class TelaObjetos extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const TelaObjeto("Objeto 2", "SAMSUNG")),
+                MaterialPageRoute(
+                    builder: (context) =>
+                        const TelaObjeto("Objeto 2", "SAMSUNG")),
               );
             },
             child: Container(
@@ -81,7 +84,9 @@ class TelaObjetos extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const TelaObjeto("Objeto 3", "Motorola")),
+                MaterialPageRoute(
+                    builder: (context) =>
+                        const TelaObjeto("Objeto 3", "Motorola")),
               );
             },
             child: Container(

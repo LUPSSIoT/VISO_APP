@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'tela_restricoes.dart';
 import 'tela_habilidades.dart';
+import 'tela_objetos.dart';
+import 'tela_restricoes.dart';
+import 'tela_habilidades.dart';
 
 void main() {
   runApp(const MaterialApp(home: MyApp()));
@@ -89,7 +92,6 @@ class AppState extends State<App> {
           //tela objeto
           //const BoxThatContainsText(),
 
-          
           //     ListBody(
           //       children: [
           //         const Padding(
