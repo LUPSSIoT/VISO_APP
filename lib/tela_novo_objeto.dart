@@ -1,54 +1,41 @@
-// ignore_for_file: camel_case_types, file_names
-
 import 'package:flutter/material.dart';
-import 'telaHabilidades.dart';
-import 'telaRestricoes..dart';
+import 'tela.dart';
+import 'tela_classe_do_objeto.dart';
+import 'tela_habilidades.dart';
+import 'tela_restricoes.dart';
 
-class telRast extends StatelessWidget {
-  const telRast({super.key});
+class TelaNovoObjeto extends StatelessWidget {
+  const TelaNovoObjeto({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
+    return Tela(
+      "Novo Objeto", 
+      () {Navigator.pop(context);},
+      Column(
         children: [
           Container(
-            margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
-            alignment: Alignment.topRight,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-                ),
-                const Text('Novo Objeto',
-                    style: TextStyle(
-                        fontFamily: 'Raleway',
-                        color: Colors.white,
-                        fontSize: 35)),
-              ],
-            ),
-          ),
-          Container(
             decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 95, 131, 197),
-                border: Border.all(
-                  color: const Color.fromARGB(255, 45, 69, 128),
-                  width: 1.5,
-                )),
+              color: const Color.fromARGB(255, 95, 131, 197),
+              border: Border.all(
+                color: const Color.fromARGB(255, 45, 69, 128),
+                width: 1.5,
+              )),
             margin: const EdgeInsets.all(50),
             padding: const EdgeInsets.all(8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 MaterialButton(
-                  //padding: const EdgeInsets.fromLTRB(25, 25, 25, 15),
                   height: 50,
                   minWidth: 400,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TelaClasseDoObjeto()),
+                    );
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
@@ -59,14 +46,13 @@ class telRast extends StatelessWidget {
                   ),
                 ),
                 MaterialButton(
-                  //padding: const EdgeInsets.fromLTRB(25, 20, 25, 20),
                   height: 50,
                   minWidth: 400,
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const habilidades()),
+                          builder: (context) => const TelaHabilidades()),
                     );
                   },
                   child: Row(
@@ -85,7 +71,7 @@ class telRast extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const restricoes()),
+                          builder: (context) => const TelaRestricoes()),
                     );
                   },
                   child: Row(
@@ -110,7 +96,7 @@ class telRast extends StatelessWidget {
               elevation: 10.0,
             ),
           ),
-        ],
+        ]
       ),
     );
   }

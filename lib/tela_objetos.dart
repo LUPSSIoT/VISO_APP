@@ -1,14 +1,18 @@
-// ignore_for_file: file_names, camel_case_types
-
 import 'package:flutter/material.dart';
+import 'package:teste/tela_objeto.dart';
+import 'tela.dart';
 
-class telObjs extends StatelessWidget {
-  const telObjs({super.key});
+class TelaObjetos extends StatelessWidget {
+  final void Function() voltarTelaInicio;
+  
+  const TelaObjetos(this.voltarTelaInicio, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListBody(
+    return Tela(
+      "Objetos",
+      voltarTelaInicio,
+      ListBody(
         children: [
           const Padding(
             padding: EdgeInsets.fromLTRB(0, 0, 0, 15),
@@ -16,7 +20,12 @@ class telObjs extends StatelessWidget {
           MaterialButton(
             height: 80,
             minWidth: 400,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const TelaObjeto("Objeto 1", "LG")),
+              );
+            },
             child: Container(
               alignment: Alignment.centerLeft,
               padding: const EdgeInsets.all(15),
@@ -40,7 +49,12 @@ class telObjs extends StatelessWidget {
           MaterialButton(
             height: 80,
             minWidth: 400,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const TelaObjeto("Objeto 2", "SAMSUNG")),
+              );
+            },
             child: Container(
               alignment: Alignment.centerLeft,
               padding: const EdgeInsets.all(15),
@@ -64,7 +78,12 @@ class telObjs extends StatelessWidget {
           MaterialButton(
             height: 80,
             minWidth: 400,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const TelaObjeto("Objeto 3", "Motorola")),
+              );
+            },
             child: Container(
               alignment: Alignment.centerLeft,
               padding: const EdgeInsets.all(15),

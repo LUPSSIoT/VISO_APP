@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:teste/telaObjetos.dart';
-//import 'telaObjetos.dart';
-import 'telaRestricoes..dart';
-import 'telaHabilidades.dart';
+import 'tela_restricoes.dart';
+import 'tela_habilidades.dart';
 
 void main() {
   runApp(const MaterialApp(home: MyApp()));
@@ -91,8 +89,7 @@ class AppState extends State<App> {
           //tela objeto
           //const BoxThatContainsText(),
 
-          const telObjs(),
-
+          
           //     ListBody(
           //       children: [
           //         const Padding(
@@ -479,7 +476,7 @@ class AppState extends State<App> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const restricoes()),
+                              builder: (context) => const TelaRestricoes()),
                         );
                         // setState(() {
                         //   indiceAtual = 7;
@@ -525,7 +522,7 @@ class AppState extends State<App> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const habilidades()),
+                              builder: (context) => const TelaHabilidades()),
                         );
                       },
                       icon:
