@@ -18,7 +18,7 @@ class TelaInicio extends StatelessWidget {
       child: Center(
         child: Column(children: [
           Container(
-            margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+            margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
             child: Stack(
               alignment: Alignment.topCenter,
               children: [
@@ -32,7 +32,7 @@ class TelaInicio extends StatelessWidget {
                   opacity: const AlwaysStoppedAnimation(.8),
                 ),
                 const Text('smart places',
-                    style: TextStyle(color: Colors.white, fontSize: 55)),
+                    style: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.bold, color: Colors.white, fontSize: 55)),
               ],
             ),
           ),
@@ -50,7 +50,7 @@ class TelaInicio extends StatelessWidget {
                   );
                 },
                 label: const Text('Rastrear Objeto',
-                    style: TextStyle(fontSize: 25)),
+                    style: TextStyle(fontFamily: 'Raleway', fontSize: 25)),
                 backgroundColor: const Color.fromARGB(255, 236, 85, 135),
                 elevation: 10.0,
               ),
@@ -61,7 +61,7 @@ class TelaInicio extends StatelessWidget {
             child: Text(
                 'Por favor, certifique-se que o\nnovo objeto esteja conectado a\nmesma rede deste dispositivo.',
                 style: TextStyle(
-                    color: Color.fromARGB(139, 165, 181, 207), fontSize: 20),
+                    fontFamily: 'Raleway', color: Color.fromARGB(139, 165, 181, 207), fontSize: 20),
                 textAlign: TextAlign.center),
           ),
         ]),
