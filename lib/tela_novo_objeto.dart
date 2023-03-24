@@ -41,7 +41,7 @@ class TelaNovoObjeto extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     Text('Classe do Objeto',
-                        style: TextStyle(color: Colors.white, fontSize: 25)),
+                        style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 25)),
                     Icon(Icons.arrow_forward_ios, color: Colors.white),
                   ],
                 ),
@@ -60,7 +60,7 @@ class TelaNovoObjeto extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     Text('Habilidades',
-                        style: TextStyle(color: Colors.white, fontSize: 25)),
+                        style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 25)),
                     Icon(Icons.arrow_forward_ios, color: Colors.white),
                   ],
                 ),
@@ -79,7 +79,7 @@ class TelaNovoObjeto extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     Text('Restrições',
-                        style: TextStyle(color: Colors.white, fontSize: 25)),
+                        style: TextStyle(fontFamily: 'Raleway', color: Colors.white, fontSize: 25)),
                     Icon(Icons.arrow_forward_ios, color: Colors.white),
                   ],
                 ),
@@ -92,7 +92,7 @@ class TelaNovoObjeto extends StatelessWidget {
           width: 150,
           child: FloatingActionButton.extended(
             onPressed: () {},
-            label: const Text('Salvar', style: TextStyle(fontSize: 25)),
+            label: const Text('Salvar', style: TextStyle(fontFamily: 'Raleway', fontSize: 25)),
             backgroundColor: const Color.fromARGB(255, 236, 85, 135),
             elevation: 10.0,
           ),
