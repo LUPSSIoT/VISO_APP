@@ -27,6 +27,7 @@ class TelaConfiguracoes extends StatelessWidget {
                   padding: EdgeInsets.all(2),
                   child: Text('Objetos',
                       style: TextStyle(
+                          fontFamily: 'Raleway', 
                           color: Color.fromARGB(255, 173, 173, 173),
                           fontSize: 25)),
                 ),
@@ -43,6 +44,7 @@ class TelaConfiguracoes extends StatelessWidget {
                           children: const [
                             Text('Ativos',
                                 style: TextStyle(
+                                    fontFamily: 'Raleway', 
                                     color: Colors.white, fontSize: 25)),
                             Icon(Icons.arrow_forward_ios, color: Colors.white),
                           ],
@@ -57,6 +59,7 @@ class TelaConfiguracoes extends StatelessWidget {
                           children: const [
                             Text('Inativos',
                                 style: TextStyle(
+                                    fontFamily: 'Raleway', 
                                     color: Colors.white, fontSize: 25)),
                             Icon(Icons.arrow_forward_ios, color: Colors.white),
                           ],
@@ -71,6 +74,7 @@ class TelaConfiguracoes extends StatelessWidget {
                           children: const [
                             Text('Banidos',
                                 style: TextStyle(
+                                    fontFamily: 'Raleway', 
                                     color: Colors.white, fontSize: 25)),
                             Icon(Icons.arrow_forward_ios, color: Colors.white),
                           ],
@@ -85,6 +89,7 @@ class TelaConfiguracoes extends StatelessWidget {
                           children: const [
                             Text('Qualificados',
                                 style: TextStyle(
+                                    fontFamily: 'Raleway', 
                                     color: Colors.white, fontSize: 25)),
                             Icon(Icons.arrow_forward_ios, color: Colors.white),
                           ],
@@ -101,7 +106,8 @@ class TelaConfiguracoes extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       Text('Círculos Sociais',
-                          style: TextStyle(color: Colors.white, fontSize: 25)),
+                          style: TextStyle(
+                              fontFamily: 'Raleway', color: Colors.white, fontSize: 25)),
                       Icon(Icons.arrow_forward_ios, color: Colors.white),
                     ],
                   ),
@@ -114,7 +120,8 @@ class TelaConfiguracoes extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       Text('Regras de Negócio',
-                          style: TextStyle(color: Colors.white, fontSize: 25)),
+                          style: TextStyle(
+                              fontFamily: 'Raleway', color: Colors.white, fontSize: 25)),
                       Icon(Icons.arrow_forward_ios, color: Colors.white),
                     ],
                   ),
