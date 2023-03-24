@@ -24,7 +24,7 @@ class Tela extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.fromLTRB(15, 15, 25, 0),
+              margin: const EdgeInsets.fromLTRB(15, 25, 25, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
